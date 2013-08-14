@@ -1,8 +1,8 @@
-//µ½Õã½­´óÑ§°ÉÄÚËÑË÷Ò³£»ÆäËû°ÉÒ²ÄÜÓÃ£¬µ«ÊÇtbs£¬Ìù°ÉidÊ²Ã´µÄ¶¼Òª×Ô¼º¸ÄÒ»ÏÂ¡£Á¬ÔÆĞ¡É­É­
+ï»¿//åˆ°æµ™æ±Ÿå¤§å­¦å§å†…æœç´¢é¡µï¼›å…¶ä»–å§ä¹Ÿèƒ½ç”¨ï¼Œä½†æ˜¯tbsï¼Œè´´å§idä»€ä¹ˆçš„éƒ½è¦è‡ªå·±æ”¹ä¸€ä¸‹ã€‚è¿äº‘å°æ£®æ£®
 var o=new Array();
 var thisdel=0;
-var _scb=function(data){var txt='';if(data['no']!=0)txt=thisdel+' Ê§°Ü£º'+data['no'];else txt=thisdel+' ³É¹¦~';console.debug(txt);setTimeout(delnext,250);}
-var del2=function(tid,pid){$.post('/f/commit/post/delete',{commit_fr:"pb",ie:"utf-8",tbs:"be4912e5fe68b2581375225140",kw:"Õã½­´óÑ§",fid:26074,tid:tid,is_vipdel:0,pid:pid,is_finf:false},_scb,"json");};
+var _scb=function(data){var txt='';if(data['no']!=0)txt=thisdel+' å¤±è´¥ï¼š'+data['no'];else txt=thisdel+' æˆåŠŸ~';console.debug(txt);setTimeout(delnext,250);}
+var del2=function(tid,pid){$.post('/f/commit/post/delete',{commit_fr:"pb",ie:"utf-8",tbs:"be4912e5fe68b2581375225140",kw:"æµ™æ±Ÿå¤§å­¦",fid:26074,tid:tid,is_vipdel:0,pid:pid,is_finf:false},_scb,"json");};
 var del=function(lnk){var tid='',pid='';var rg=lnk.match(/\/p\/(\d+)[?]pid=(\d+)/);
 tid=rg[1];pid=rg[2];del2(tid,pid);}
 var addlist=function(){
@@ -11,8 +11,8 @@ for(i=0;i<$('.p_content').length;i++)
 if($($('.p_content')[i]).parent().children('input').attr('checked'))
  o.push($($('.p_content')[i]).parent().children('span').children('a').attr('href'));}
 
-var delnext=function(){if(thisdel>o.length-1){alert('È«²¿Íê±Ï£¡'); return;}del(o[thisdel++]);}
+var delnext=function(){if(thisdel>o.length-1){alert('å…¨éƒ¨å®Œæ¯•ï¼'); return;}del(o[thisdel++]);}
 var startdelete=function(){addlist();delnext();}
 //start
 
-$('.p_content').after('<input type=checkbox><a onclick="if($(this).parent().children(\'input\').attr(\'checked\'))$(this).parent().children(\'input\').removeAttr(\'checked\');else $(this).parent().children(\'input\').attr(\'checked\',\'true\');">É¾³ı</a><div><input type=button onclick=startdelete() value=¿ªÊ¼É¾³ı£¡></div>');
+$('.p_content').after('<input type=checkbox><a onclick="if($(this).parent().children(\'input\').attr(\'checked\'))$(this).parent().children(\'input\').removeAttr(\'checked\');else $(this).parent().children(\'input\').attr(\'checked\',\'true\');">åˆ é™¤</a><div><input type=button onclick=startdelete() value=å¼€å§‹åˆ é™¤ï¼></div>');
