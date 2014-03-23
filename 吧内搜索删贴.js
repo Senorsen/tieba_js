@@ -1,5 +1,4 @@
-﻿//到浙江大学吧内搜索页；其他吧也能用，但是tbs，贴吧id什么的都要自己改一下。连云小森森
-//    http://tieba.baidu.com/dc/common/tbs
+// 吧内搜索页；连云小森森
 var tbs;
 $.getJSON("http://tieba.baidu.com/dc/common/tbs","",function(data){tbs=data['tbs'];});
 var o=new Array();
